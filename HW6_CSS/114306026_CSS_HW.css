@@ -1,0 +1,158 @@
+.main-container{
+    background-color: antiquewhite;
+    width: 1000px;
+    margin:auto;
+    display: flex; 
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.Left-Panel{
+    flex: 3;
+    background-color: rgb(47, 187, 252);
+}
+
+
+.Right-Panel{
+    flex: 7;
+    background-color: rgb(253, 255, 254);
+}
+
+.Left-Panel img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.Left-Panel .TextContentPanel{
+    margin: 0;
+    padding: 0 20px;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.TextContentPanel h1{
+    margin: 0;
+    padding: 0;
+}
+
+.TextContentPanel h2{
+    margin: 0;
+    padding: 0;
+}
+
+.TextContentPanel p{
+    margin: 0;
+    padding: 0;
+}
+
+.TextContentPanel h3{
+    margin: 0;
+    padding-top: 10px;
+}
+
+.Left-Panel .TextContentPanel hr{
+    margin-top:5px;
+    margin-bottom: 10px;
+    border: none;
+    border-top: 1px solid #ffffff;
+}
+
+.section{
+    margin: 0;
+    padding: 0 20px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section hr{
+    margin-top:5px;
+    margin-bottom: 10px;
+    border: none;
+    border-top: 2px solid #000000;
+}
+
+.section .section-title{
+    margin: 0;
+    padding: 0;
+}
+
+.year{
+    color: rgb(73, 73, 83);
+}
+
+.description {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.tag{
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 9px;
+    background-color: rgb(218, 238, 238);
+    color:rgb(88, 143, 194);
+    border-radius: 10px;
+}
+
+
+.container{
+    display:flex;
+}
+.hw-column{
+    flex: 50%;
+}
+
+.lab-column{
+    flex: 50%;
+}
+
+.section ul{
+    color: rgb(53, 53, 68);
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+}
+
+.section h3{
+    color: rgb(88, 88, 113);
+    margin: 0;
+    padding: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: rgb(115, 195, 195);
+}
+
+a:hover{
+    color: rgb(67, 87, 87);
+}
+
+a:visited{
+    color: rgb(100, 145, 145);
+}
+
+a:active{
+    color: rgb(255, 0, 0);
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+
+}
+
+td {
+    text-align: center;
+    width: 25%;
+}
+
+.music-note{
+    font-family: 'Times New Roman', Times, serif;
+}
