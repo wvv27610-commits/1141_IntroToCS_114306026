@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>My Page</title>
+<style>
+    body {
+        margin: 0;
+        background-color: rgb(244, 244, 244);
+        font-family:'Courier New', Courier, monospace
+    }
+
+    /* Header */
+    header {
+        margin: 0;
+        background-color: rgb(67, 137, 218);
+        color: white;
+        text-align: center;
+        padding: 1px 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+
+    /* Navigation */
+    .navbar {
+        margin: 0;
+        background-color: rgb(44, 62, 80);
+        color: white;
+        display: flex;
+        justify-content: center;
+        gap: 15%;
+        padding: 5px 0;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    li{
+        list-style: none;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+    }
+    .dropdownmenu{
+        display: none;
+        position: absolute;
+        background-color: rgb(44, 62, 80);
+        border-radius: 10px;
+        text-align: left;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .dropdownmenu li{
+        margin: 0;
+        padding: 8px;
+    }
+
+    ul li:hover ul.dropdownmenu {
+     display: block;
+    }
+
+    ul li:hover{
+        color: rgb(0, 162, 255);
+    }
+
+    li a:hover{
+        color: rgb(0, 162, 255);
+    }
+
+    .thetext {
+        padding: 0 30px;
+        font-size: 20px;
+    }
+
+    @media all and (max-width: 600px){
+        .navbar {
+        gap: 10%;
+        }
+        body {
+        background-color: coral;
+        }
+    }
+
+    @media print{
+        body{
+            background-color: white;
+        }
+    }
+ 
+</style>
+</head>
+<body>
+
+<header>
+    <h1><a>My Page</a></h1>
+    <p>Welcome to my homepage. Explore and enjoy!</p>
+</header>
+
+<ul class="navbar">
+    <li><a>Home</a></li>
+
+    <li><a>About</a></li>
+
+    <li>
+      Services▾
+      <ul class="dropdownmenu">
+        <li><a>Web Design</a></li>
+        <li><a href = "https://commerce.adobe.com/store/checkout?items%5B0%5D%5Bid%5D=B740D1F2F6369BD1C342E6E372A61B50&co=TW&lang=zh-hant&cli=creative&rrItems%5B0%5D%5Bid%5D=B740D1F2F6369BD1C342E6E372A61B50">Graphic Design</a></li>
+        <li><a>Digital Marketing</a></li>
+      </ul>
+    </li>
+
+    <li><a>Contect</a></li>   
+</ul>
+
+<div class="thetext">
+    <p>This is my first homepage. I'm learning CSS to create a site.</p>
+    <p>Feel free to send me a message: <strong>114306026@nccu.edu.tw</strong></p>
+</div>
+
+</body>
+</html>
