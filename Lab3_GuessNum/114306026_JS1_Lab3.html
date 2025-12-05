@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <div>
+            <img id="imgResult" src="images/correct.jpg">
+        </div>
+
+        <script>
+            var answer = Math.floor(Math.random() * 100) + 1;
+
+            var chances = 7;
+            var left = 1;
+            var right = 100;
+
+            while (chances > 0) 
+            {
+                var input =  window.prompt("輸入"+left+"到"+right+"的數字\n你還有"+chances+"次機會 答案："+answer);
+                
+                if (input === null) continue;
+                
+                if (input === "" || isNaN(input))
+                {
+                    input.trim()
+                    alert("請輸入有效數字");
+                    continue;
+                }
+                var guess = Number(input);
+
+                chances--;
+                if(guess == answer)
+                {
+                    alert("答對了！真確答案是"+answer);
+                    document.getElementById("imgResult").src = "images/correct.jpg";
+                    break;
+                }
+                else if(chances ==0)
+                {
+                    document.getElementById("imgResult").src = "images/wrong.jpg";
+                }
+                else if(guess > answer)
+                {
+                    right = guess;
+                }
+                else if(guess < answer)
+                {
+                    left = guess;
+                }
+            }
+
+        </script>
+    </body>
+</html>
