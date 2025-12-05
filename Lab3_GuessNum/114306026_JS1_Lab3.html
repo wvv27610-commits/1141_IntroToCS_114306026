@@ -15,7 +15,7 @@
 
             while (chances > 0) 
             {
-                var input =  window.prompt("輸入"+left+"到"+right+"的數字\n你還有"+chances+"次機會 答案："+answer);
+                var input =  window.prompt("輸入"+left+"到"+right+"的數字\n你還有"+chances+"次機會");
                 
                 if (input === null) continue;
                 
@@ -30,7 +30,7 @@
                 chances--;
                 if(guess == answer)
                 {
-                    alert("答對了！真確答案是"+answer);
+                    alert("答對了！正確答案是"+answer);
                     document.getElementById("imgResult").src = "images/correct.jpg";
                     break;
                 }
