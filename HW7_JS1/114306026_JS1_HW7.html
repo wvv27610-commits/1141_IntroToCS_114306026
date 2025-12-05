@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>114306026_1A2B</h1>
+        Enter 4 unique numbers <input id="GuessInput" type="text">
+        <button onclick="play()">Guess!</button>
+        <button onclick="alert(answer.join(''))">偷看答案</button>
+        <div style="border: 2px solid white; margin-top:10px;" id="result"></div>
+
+        <script>
+            var answer = [];
+            var x = 0;
+            var y= 0;
+            var count = 1;
+
+
+            function generateAnswer()
+            {
+                while (answer.length < 4) {
+                    let num = Math.floor(Math.random() * 10);
+                    if (!answer.includes(num)) 
+                    {
+                        answer.push(num);
+                    }
+                }
+            }
+           
+            generateAnswer();
+
+            function play()
+            {
+                var inputvalue = document.getElementById("GuessInput").value.trim();
+                if(isValid(inputvalue))
+                {
+                    var num = Number(inputvalue);
+                    var Guess = new Array(4).fill(0);
+                    for(i = 0;i < 4 ;i++)
+                    {
+                        Guess[3-i] = num%10;
+                        num = Math.floor(num/10);
+                    }
+                    document.getElementById("GuessInput").value = "";
+                    
+                    checkAB(Guess,answer);
+
+                    document.getElementById("result").innerHTML += "第"+count+"次: "+Guess.join("") +"→"+ x + "A"+y+"B<br>";
+                    document.getElementById("result").style.borderColor = "rgb(179, 179, 179)";
+                    x = 0;
+                    y = 0;
+                    count ++;
+                }        
+            }
+
+            function isValid(str)
+            {
+                if (str === "" || isNaN(str)||str.length !== 4)
+                {
+                    alert("Check if the input consists of exactly 4 digits.");
+                    return false;
+                }
+                if(new Set(str).size !== str.length)
+                {
+                    alert("Check if there are any duplicate digits");
+                    return false;
+                }
+                return true;
+            }
+
+            function checkAB(guess, ans)
+            {
+                for(i = 0; i<4;i++)
+                {
+                    if(guess[i]== ans[i])
+                    {
+                        x++;
+                    }
+                    else if(ans.includes(guess[i]))
+                    {
+                        y++;
+                    }
+                }
+            }
+            
+        </script>
+
+    </body>
+</html>
