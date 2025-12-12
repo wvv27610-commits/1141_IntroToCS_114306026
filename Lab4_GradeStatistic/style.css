@@ -1,0 +1,22 @@
+table, table td {
+                border: 1px solid rgb(128, 128, 128);
+                border-collapse: collapse;
+            }
+            table td{
+                width: 250px;
+                height: 30px;
+                text-align: center;
+            }
+            .catagory
+            {
+                background-color: rgb(195, 195, 195);
+                font-weight: bold;
+            }
+            .statistic
+            {
+                font-weight: bold;
+            }
+            h1
+            {
+                text-align: center;
+            }
